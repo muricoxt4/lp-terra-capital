@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="1º Terra Capital Conecta — 08 de Maio de 2026. O campo e a Faria Lima nunca estiveram tão próximos. Evento exclusivo com 140 convidados VIP em Ponta Grossa/PR.">
+<title>1º Terra Capital Conecta — 08 de Maio de 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ───────────────────────────────────────── */
+:root{
+  --g0:#060D09;
+  --g1:#0D1A10;
+  --g2:#122018;
+  --green:#2ECC71;
+  --green-dark:#1A7A4E;
+  --teal:#1B6B7D;
+  --gold:#C9A84C;
+  --gold-l:#E8D08A;
+  --gold-d:#9A7D2E;
+  --white:#F2F5F2;
+  --muted:#8FAAA0;
+  --dim:#526860;
+  --glass:rgba(18,32,24,.55);
+  --glass-b:rgba(46,204,113,.12);
+  --gold-glass:rgba(201,168,76,.08);
+  --gold-glass-b:rgba(201,168,76,.22);
+  --fh:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --fd:'Bebas Neue','Arial Narrow',sans-serif;
+  --pad:clamp(4.5rem,9vw,8rem);
+}
+
+/* ── RESET ────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fh);background:var(--g0);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+/* ── UTILS ────────────────────────────────────────── */
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+.gold-bar{width:52px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));margin-bottom:1.5rem}
+.label{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block}
+.h2{font-family:var(--fd);font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:.03em}
+.text{font-size:1.05rem;color:var(--muted);line-height:1.8}
+.grad{background:linear-gradient(135deg,var(--green),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+
+/* ── BUTTONS ──────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:.95rem;padding:.9rem 2rem;border-radius:100px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;letter-spacing:.02em}
+.btn:hover{transform:translateY(-2px)}
+.btn-green{background:linear-gradient(135deg,var(--green),var(--teal));color:#fff}
+.btn-green:hover{box-shadow:0 10px 32px rgba(46,204,113,.38)}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold-glass-b)}
+.btn-outline:hover{background:var(--gold-glass)}
+
+/* ── NAV ──────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 0;transition:background .35s,padding .35s,border-color .35s}
+.nav.sc{background:rgba(6,13,9,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:.8rem 0;border-bottom:1px solid rgba(46,204,113,.1)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between}
+img.nav-logo{height:65px;width:auto}
+.nav-btn{display:inline-flex;align-items:center;gap:.45rem;background:linear-gradient(135deg,var(--green),var(--teal));color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.04em;padding:.6rem 1.4rem;border-radius:100px;transition:transform .2s,box-shadow .2s}
+.nav-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(46,204,113,.35)}
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:center;width:100%}
+.hero-sp{position:relative;flex-shrink:0}
+.hero-sp-frame{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 32px 80px rgba(0,0,0,.6);border:1px solid var(--gold-glass-b)}
+.hero-sp-frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-sp-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(6,13,9,.92) 0%,transparent 45%);border-radius:20px}
+.hero-sp-info{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;z-index:1}
+.hero-sp-badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--g0);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .75rem;border-radius:6px;margin-bottom:.55rem}
+.hero-sp-divider{width:32px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));margin-bottom:.55rem}
+.hero-sp-name{font-family:var(--fd);font-size:1.75rem;font-weight:400;letter-spacing:.04em;line-height:1.0;margin-bottom:.2rem}
+.hero-sp-role{font-size:.72rem;color:var(--muted);line-height:1.4;margin-bottom:.6rem}
+.hero-sp-talk{display:inline-flex;align-items:center;gap:.5rem;background:rgba(6,13,9,.65);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(46,204,113,.18);border-radius:8px;padding:.45rem .85rem;font-size:.75rem;color:var(--white)}
+.hero-sp-talk strong{color:var(--green);font-weight:800}
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:1.75rem}
+  .hero-sp{display:block}
+  .hero-sp-frame{aspect-ratio:3/2;border-radius:14px}
+  .hero-sp-name{font-size:1.4rem}
+  .hero-sp-role{font-size:.7rem}
+  .hero-sp-info{bottom:1rem;left:1rem;right:1rem}
+  .hero-sp-talk{font-size:.72rem;flex-wrap:wrap}
+  .hero-body{padding:7rem 0 1.5rem}
+}
+.hero-bg{position:absolute;inset:0;background:url('assets/buracoPadre_2.jpeg') center/cover no-repeat;will-change:transform}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(150deg,rgba(6,13,9,.95) 0%,rgba(15,61,46,.75) 45%,rgba(6,13,9,.9) 100%)}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 72% 45%,rgba(27,107,125,.14) 0%,transparent 58%)}
+.hero-bot{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,var(--g0),transparent);z-index:1}
+
+.hero-body{position:relative;z-index:2;padding:8rem 0 6rem;max-width:800px}
+.hero-badge{display:inline-flex;align-items:center;gap:.7rem;padding:.4rem 1.1rem;border-radius:100px;border:1px solid var(--gold-glass-b);background:var(--gold-glass);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);margin-bottom:2rem}
+.hero-badge span{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:dot 2s infinite}
+@keyframes dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+
+.hero-title{font-family:var(--fd);font-size:clamp(3rem,7vw,6rem);font-weight:400;line-height:1.0;letter-spacing:.04em;margin-bottom:1.6rem}
+.hero-title em{font-style:normal;background:linear-gradient(135deg,var(--green) 30%,var(--gold-l) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(1rem,1.8vw,1.15rem);color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:2.5rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:2.75rem}
+.hero-chip{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;padding:.4rem .95rem}
+.hero-chip svg{color:var(--green);flex-shrink:0}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:.4rem;animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--dim),transparent)}
+.hero-scroll span{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+
+/* ── STATS BAR ────────────────────────────────────── */
+.stats-bar{background:var(--g1);border-top:1px solid rgba(46,204,113,.08);border-bottom:1px solid rgba(46,204,113,.08);padding:2.75rem 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{text-align:center;padding:1.25rem .5rem;border-right:1px solid rgba(46,204,113,.1)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--fd);font-size:clamp(2.5rem,5vw,3.75rem);font-weight:400;line-height:1;letter-spacing:.04em;background:linear-gradient(135deg,var(--green),var(--gold-l));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:.4rem}
+.stat-l{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* ── EXPERIENCE ───────────────────────────────────── */
+.experience{padding:var(--pad) 0;position:relative;overflow:hidden}
+.experience::after{content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(27,107,125,.07) 0%,transparent 70%);pointer-events:none}
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+.exp-copy{}
+.exp-title{font-family:var(--fd);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.05;letter-spacing:.04em;margin-bottom:1.4rem}
+.exp-note{display:flex;gap:.75rem;align-items:flex-start;padding:1rem 1.25rem;background:var(--gold-glass);border:1px solid var(--gold-glass-b);border-radius:12px;font-size:.9rem;color:var(--gold-l);line-height:1.55;margin-top:1.5rem}
+.exp-note svg{flex-shrink:0;margin-top:2px}
+.exp-imgs{position:relative;height:520px}
+.exp-main{position:absolute;right:0;top:0;width:78%;height:100%;border-radius:20px;overflow:hidden}
+.exp-main img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.exp-main:hover img{transform:scale(1.04)}
+.exp-float{position:absolute;left:0;bottom:-1.25rem;width:50%;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:3px solid var(--g0);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.exp-float img{width:100%;height:100%;object-fit:cover}
+
+/* ── SPEAKER ──────────────────────────────────────── */
+.speaker{padding:var(--pad) 0;background:var(--g1);position:relative;overflow:hidden}
+.speaker::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 50%,rgba(27,107,125,.13) 0%,transparent 60%)}
+.sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center;position:relative;z-index:1}
+.sp-copy{}
+.sp-star{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem 1rem;border-radius:100px;background:var(--gold-glass);border:1px solid var(--gold-glass-b);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:1.5rem}
+.sp-name{font-family:var(--fd);font-size:clamp(2.8rem,5.5vw,4.5rem);font-weight:400;line-height:1.0;letter-spacing:.05em;margin-bottom:.5rem}
+.sp-role{font-size:.95rem;color:var(--green);font-weight:600;margin-bottom:1.5rem;letter-spacing:.02em}
+.sp-bio{font-size:1.02rem;color:var(--muted);line-height:1.8;margin-bottom:2rem}
+.sp-talk{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.25rem;background:rgba(46,204,113,.07);border:1px solid rgba(46,204,113,.18);border-radius:12px;font-size:.92rem}
+.sp-talk-time{font-size:1.2rem;font-weight:800;color:var(--green)}
+.sp-photo{position:relative}
+.sp-frame{border-radius:22px;overflow:hidden;aspect-ratio:3/4;max-height:580px}
+.sp-frame img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.sp-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,26,16,.85) 0%,transparent 40%);border-radius:22px}
+.sp-label{position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;z-index:1}
+.sp-label h3{font-family:var(--fd);font-size:1.8rem;font-weight:400;line-height:1.05;letter-spacing:.04em;margin-bottom:.25rem}
+.sp-label p{font-size:.82rem;color:var(--muted)}
+.sp-badge{position:absolute;top:1.25rem;right:-1rem;background:var(--gold);color:var(--g0);font-size:.78rem;font-weight:800;letter-spacing:.05em;padding:.5rem 1rem;border-radius:8px;z-index:2}
+.sp-glow{position:absolute;bottom:-40px;left:10%;width:80%;height:60px;background:radial-gradient(ellipse,rgba(46,204,113,.2) 0%,transparent 70%);filter:blur(18px)}
+
+/* ── SCHEDULE ─────────────────────────────────────── */
+.schedule{padding:var(--pad) 0;background:var(--g0)}
+.sch-head{text-align:center;margin-bottom:4rem}
+.sch-head .h2{margin:.75rem 0 .75rem}
+.sch-head .gold-bar{margin:0 auto 1.25rem}
+
+.timeline{position:relative;max-width:740px;margin:0 auto}
+.timeline::before{content:'';position:absolute;left:74px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,transparent,var(--gold-d) 8%,var(--gold-d) 92%,transparent)}
+.tl-item{display:grid;grid-template-columns:74px 1px 1fr;gap:0 1.5rem;margin-bottom:1.25rem;position:relative}
+.tl-time{text-align:right;font-size:.85rem;font-weight:700;color:var(--dim);padding-top:1.1rem;letter-spacing:.03em}
+.tl-dot-col{display:flex;justify-content:center;position:relative}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--g0);border:2px solid var(--gold-d);margin-top:1.3rem;flex-shrink:0;z-index:1;transition:border-color .2s,background .2s}
+.tl-item.feat .tl-dot{width:14px;height:14px;background:var(--green);border-color:var(--green);margin-top:1.2rem;box-shadow:0 0 16px rgba(46,204,113,.45)}
+.tl-item.spec .tl-dot{background:var(--gold);border-color:var(--gold)}
+.tl-card{padding:.95rem 1.25rem;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05);transition:border-color .2s,background .2s}
+.tl-card:hover{background:rgba(255,255,255,.04);border-color:rgba(46,204,113,.12)}
+.tl-item.feat .tl-card{background:rgba(46,204,113,.06);border-color:rgba(46,204,113,.18)}
+.tl-item.spec .tl-card{background:var(--gold-glass);border-color:var(--gold-glass-b)}
+.tl-tag{display:block;font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
+.tl-title{font-size:.95rem;font-weight:500;line-height:1.4;color:var(--white)}
+.tl-item.feat .tl-title{font-size:1.05rem;font-weight:700;color:var(--green)}
+
+/* ── LOCAL ────────────────────────────────────────── */
+.local{position:relative;padding:var(--pad) 0;overflow:hidden}
+.local-bg{position:absolute;inset:0;background:url('assets/buracoPadre_1.jpeg') center/cover no-repeat}
+.local-veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,13,9,.97) 0%,rgba(6,13,9,.88) 55%,rgba(6,13,9,.55) 100%)}
+.local-body{position:relative;z-index:1;max-width:560px}
+.local-title{font-family:var(--fd);font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.05;letter-spacing:.04em;margin:1rem 0 1.5rem}
+.local-cards{display:grid;grid-template-columns:1fr 1fr;gap:.875rem;margin-top:2rem}
+.local-card{background:rgba(13,26,16,.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(46,204,113,.12);border-radius:14px;padding:1.25rem 1.5rem}
+.local-card-l{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:.35rem}
+.local-card-v{font-size:.98rem;font-weight:600;line-height:1.35}
+.local-card-v b{color:var(--green)}
+
+/* ── RSVP ─────────────────────────────────────────── */
+.rsvp{padding:var(--pad) 0;background:var(--g0);position:relative;overflow:hidden}
+.rsvp::before{content:'';position:absolute;bottom:-200px;left:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(46,204,113,.05) 0%,transparent 70%);pointer-events:none}
+.rsvp-wrap{max-width:620px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.rsvp-title{font-family:var(--fd);font-size:clamp(2.2rem,4.5vw,3.5rem);font-weight:400;line-height:1.05;letter-spacing:.04em;margin:.75rem 0 1rem}
+.rsvp-sub{font-size:1rem;color:var(--muted);line-height:1.75;margin-bottom:2.5rem}
+.rsvp-urgency{display:flex;align-items:center;justify-content:center;gap:.75rem;padding:.875rem 1.25rem;background:var(--gold-glass);border:1px solid var(--gold-glass-b);border-radius:10px;font-size:.88rem;color:var(--gold-l);margin-bottom:2.5rem}
+.rsvp-urgency .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:dot 2s infinite;flex-shrink:0}
+
+.form-card{background:rgba(13,26,16,.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(46,204,113,.12);border-radius:22px;padding:2.5rem;text-align:left}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{margin-bottom:1.1rem}
+.fg label{display:block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:.45rem}
+.fg input,.fg select{width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(46,204,113,.12);border-radius:9px;padding:.85rem 1.1rem;font-size:.95rem;font-family:var(--fh);color:var(--white);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+.fg input::placeholder{color:var(--dim)}
+.fg input:focus,.fg select:focus{border-color:rgba(46,204,113,.4);background:rgba(46,204,113,.04)}
+.fg select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23526860' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;cursor:pointer}
+.fg select option{background:#0D1A10;color:#F2F5F2}
+.form-submit{width:100%;padding:1.1rem;background:linear-gradient(135deg,var(--green),var(--teal));color:#fff;font-family:var(--fh);font-size:1rem;font-weight:700;letter-spacing:.04em;border:none;border-radius:12px;cursor:pointer;margin-top:.5rem;transition:transform .2s,box-shadow .2s}
+.form-submit:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(46,204,113,.35)}
+.form-note{text-align:center;font-size:.74rem;color:var(--dim);margin-top:.9rem}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer{background:var(--g1);border-top:1px solid rgba(46,204,113,.08);padding:2.5rem 0;text-align:center}
+footer img{height:28px;margin:0 auto 1rem;opacity:.75}
+footer p{font-size:.78rem;color:var(--dim);line-height:1.7}
+
+/* ── MODAL ────────────────────────────────────────── */
+.modal{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(6,13,9,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .4s}
+.modal.on{opacity:1;pointer-events:all}
+.modal-box{background:var(--g1);border:1px solid rgba(46,204,113,.15);border-radius:26px;padding:clamp(2rem,5vw,3rem);max-width:540px;width:100%;text-align:center;transform:translateY(28px) scale(.96);transition:transform .4s ease}
+.modal.on .modal-box{transform:none}
+.modal-check{width:76px;height:76px;border-radius:50%;background:rgba(46,204,113,.12);border:1px solid rgba(46,204,113,.28);display:flex;align-items:center;justify-content:center;margin:0 auto 1.75rem;animation:pop .55s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-title{font-family:var(--fd);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;letter-spacing:.04em;margin-bottom:.875rem}
+.modal-msg{font-size:.98rem;color:var(--muted);line-height:1.7;margin-bottom:1.75rem}
+.modal-fomo{padding:1.1rem 1.4rem;background:var(--gold-glass);border:1px solid var(--gold-glass-b);border-radius:12px;font-size:.88rem;color:var(--gold-l);line-height:1.55;margin-bottom:2rem}
+.cal-btns{display:flex;flex-direction:column;gap:.75rem}
+.cal-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.25rem;border-radius:12px;font-size:.9rem;font-weight:600;cursor:pointer;border:none;transition:transform .15s,opacity .15s;text-decoration:none;width:100%}
+.cal-btn:hover{transform:translateY(-2px);opacity:.88}
+.cal-gcal{background:#4285F4;color:#fff}
+.cal-outlook{background:#0072C6;color:#fff}
+.cal-ical{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:var(--white)}
+.modal-close{margin-top:1.25rem;font-size:.8rem;color:var(--dim);background:none;border:none;cursor:pointer;letter-spacing:.06em}
+.modal-close:hover{color:var(--muted)}
+/* error */
+.form-error{display:none;align-items:flex-start;gap:.7rem;padding:.9rem 1.1rem;background:rgba(220,60,60,.1);border:1px solid rgba(220,60,60,.3);border-radius:10px;font-size:.88rem;color:#f87171;line-height:1.5;margin-top:.75rem}
+.form-error.on{display:flex}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media(max-width:900px){
+  .exp-grid,.sp-grid{grid-template-columns:1fr;gap:2.75rem}
+  .exp-imgs{height:380px}
+  .sp-frame{max-height:360px;aspect-ratio:16/9}
+  .sp-photo{order:-1}
+  .sp-badge{top:-1rem;right:1rem}
+  .sp-frame img{object-position:center 20%}
+}
+@media(max-width:680px){
+  .stats-grid{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid rgba(46,204,113,.08);padding:1.25rem 1rem}
+  .stat:last-child{border-bottom:none}
+  .form-row{grid-template-columns:1fr}
+  .local-cards{grid-template-columns:1fr}
+  .cal-btns{flex-direction:column}
+  .timeline::before{left:56px}
+  .tl-item{grid-template-columns:56px 1px 1fr}
+  .tl-time{font-size:.78rem}
+  .tl-item.feat .tl-dot,.tl-dot{margin-top:1.15rem}
+  .hero-body{padding:7rem 0 5rem}
+  .form-card{padding:1.75rem 1.25rem;border-radius:16px}
+}
+@media(max-width:400px){
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  img.nav-logo{height:38px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Navegação principal">
+  <div class="wrap">
+    <a href="#" aria-label="Terra Capital – Página inicial">
+      <img src="assets/LOGO%20TERRA%20CAPITAL_BRANCO.png" alt="Terra Capital – Fazendas e Finanças" class="nav-logo">
+    </a>
+    <a href="#rsvp" class="nav-btn">
+      Confirmar Presença
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" id="heroBg" role="img" aria-label="Furna do Buraco do Padre — cachoeira dentro da furna"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-bot" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-body">
+      <div class="hero-badge rv">
+        <span aria-hidden="true"></span>
+        1º Terra Capital Conecta &nbsp;·&nbsp; Evento Exclusivo VIP
+      </div>
+      <h1 class="hero-title rv d1" id="hero-title">
+        Convidamos você para o primeiro <em>Terra Capital Conecta</em>.
+      </h1>
+      <p class="hero-sub rv d2">
+        O agronegócio brasileiro sempre foi gigante, mas o futuro exige mais do que tamanho: exige velocidade. Participe do ecossistema que está transformando o agro na maior rede de inteligência financeira do país.
+      </p>
+      <div class="hero-meta rv d2" role="list" aria-label="Informações do evento">
+        <div class="hero-chip" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          08 de Maio, 2026 · Sexta-feira
+        </div>
+        <div class="hero-chip" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          16h30 Recepção · 18h Palestras
+        </div>
+        <div class="hero-chip" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Buraco do Padre · Ponta Grossa/PR
+        </div>
+        <div class="hero-chip" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          140 Convidados Selecionados
+        </div>
+      </div>
+      <div class="hero-actions rv d3">
+        <a href="#rsvp" class="btn btn-green">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          Confirmar Presença
+        </a>
+        <a href="#programacao" class="btn btn-outline">Ver Programação</a>
+      </div>
+    </div>
+
+    <!-- SPEAKER DESTAQUE NO HERO -->
+    <div class="hero-sp rv d2" aria-label="Palestrante principal: Deltan Dallagnol">
+      <div class="hero-sp-frame">
+        <img src="assets/palestrantePrincipal_1.webp" alt="Deltan Dallagnol — Palestrante Principal" width="300" height="400" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero-sp-info">
+        <div class="hero-sp-badge">⭐ Palestra Principal</div>
+        <div class="hero-sp-divider" aria-hidden="true"></div>
+        <p class="hero-sp-name">Deltan<br><span class="grad">Dallagnol</span></p>
+        <p class="hero-sp-role">Ex-Procurador da República<br>Coordenador da Lava Jato</p>
+        <div class="hero-sp-talk">
+          <strong>20:30</strong>
+          <span style="color:var(--dim)">·</span>
+          <span>Brasil 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar" aria-label="Números do evento">
+  <div class="wrap">
+    <div class="stats-grid" role="list">
+      <div class="stat rv" role="listitem">
+        <span class="stat-n" aria-label="140">140</span>
+        <span class="stat-l">Convidados VIP</span>
+      </div>
+      <div class="stat rv d1" role="listitem">
+        <span class="stat-n" aria-label="6 palestras">6+</span>
+        <span class="stat-l">Palestras Técnicas</span>
+      </div>
+      <div class="stat rv d2" role="listitem">
+        <span class="stat-n" aria-label="primeira edição">1ª</span>
+        <span class="stat-l">Edição Histórica</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experiencia" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="exp-grid">
+      <div class="exp-copy">
+        <div class="gold-bar rv" aria-hidden="true"></div>
+        <span class="label rv">Experiência Exclusiva</span>
+        <h2 class="exp-title rv d1" id="exp-title">
+          Um cenário,<br><span class="grad">paisagem</span><br>e palco únicos.
+        </h2>
+        <p class="text rv d2">
+          Antes do início das palestras, desfrute de uma visita exclusiva à <strong style="color:var(--white)">Furna do Buraco do Padre</strong>. Transforme o seu fim de tarde em um momento inesquecível cercado por uma das paisagens mais impressionantes do Sul do Brasil.
+        </p>
+        <p class="text rv d2" style="margin-top:.875rem">
+          Uma experiência planejada para aproximar produtores e investidores num cenário que vai além da sala de reuniões.
+        </p>
+        <div class="exp-note rv d3" role="note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span>Recomendamos chegar às <strong>16:30h</strong> — 1h30 antes das palestras — para aproveitar o cenário e a vista com luz natural antes do anoitecer.</span>
+        </div>
+      </div>
+      <div class="exp-imgs rv d1" aria-hidden="true">
+        <div class="exp-main">
+          <img src="assets/buracoPadre_1.jpeg" alt="Cânion rochoso do Buraco do Padre com passarela de madeira" loading="lazy" width="600" height="750">
+        </div>
+        <div class="exp-float">
+          <img src="assets/buracoPadre_2.jpeg" alt="Cachoeira dentro da Furna do Buraco do Padre" loading="lazy" width="300" height="375">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section class="speaker" id="palestrante" aria-labelledby="sp-title">
+  <div class="wrap">
+    <div class="sp-grid">
+      <div class="sp-copy">
+        <div class="sp-star" aria-hidden="true">★ Palestra Principal</div>
+        <div class="gold-bar rv" aria-hidden="true"></div>
+        <h2 class="sp-name rv" id="sp-title">Deltan<br><span class="grad">Dallagnol</span></h2>
+        <p class="sp-role rv d1">Ex-Procurador da República · Coordenador da Lava Jato</p>
+        <p class="sp-bio rv d2">
+          Uma das vozes mais influentes sobre ética pública, segurança jurídica e cenário político no Brasil contemporâneo. Deltan Dallagnol traz ao 1º Terra Capital Conecta uma análise singular dos desafios e oportunidades que impactam diretamente o agronegócio e o mercado de capitais.
+        </p>
+        <div class="sp-talk rv d3" aria-label="Palestra principal às 20h30 sobre cenário político e jurídico">
+          <span class="sp-talk-time">20:30</span>
+          <span style="color:var(--dim)">·</span>
+          <span style="color:var(--muted);font-size:.9rem">Brasil 2026: Cenário Político, Econômico e Jurídico</span>
+        </div>
+      </div>
+      <div class="sp-photo rv d2">
+        <div class="sp-frame">
+          <img src="assets/palestrantePrincipal_1.webp" alt="Deltan Dallagnol — Palestrante Principal do 1º Terra Capital Conecta" width="600" height="800" loading="lazy">
+        </div>
+        <div class="sp-label">
+          <h3>Deltan Dallagnol</h3>
+          <p>Brasil 2026: Cenário Político, Econômico e Jurídico · 08/05 às 20h30</p>
+        </div>
+        <div class="sp-badge">20h30</div>
+        <div class="sp-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule" id="programacao" aria-labelledby="sch-title">
+  <div class="wrap">
+    <div class="sch-head">
+      <div class="gold-bar rv" aria-hidden="true"></div>
+      <span class="label rv">Programação</span>
+      <h2 class="h2 rv d1" id="sch-title">Uma noite de alto nível.</h2>
+      <p class="text rv d2" style="max-width:480px;margin:.75rem auto 0">08 de Maio de 2026 · Buraco do Padre · Ponta Grossa/PR</p>
+    </div>
+    <div class="timeline" role="list" aria-label="Programação do evento">
+
+      <div class="tl-item spec" role="listitem">
+        <span class="tl-time" aria-label="16 horas e 30">16:30</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Welcome Experience Buraco do Padre</p></div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="18 horas">18:00</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Abertura Oficial | TerraCapital: Crescimento que Gera Resultado</p></div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="18 horas e 30">18:30</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Campos Gerais em Foco | O Novo Cenário Financeiro da Agricultura</p></div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="19 horas">19:00</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Proteção de Margens | Estratégias de Hedge em Tempos Desafiadores</p></div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="19 horas e 30">19:30</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Estratégias de Sucessão Patrimonial / Oportunidades do Mercado Financeiro no Agro</p></div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="20 horas">20:00</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Blindagem Patrimonial para o Agro | Segurança Jurídica</p></div>
+      </div>
+
+      <div class="tl-item feat" role="listitem">
+        <span class="tl-time" style="color:var(--green);font-weight:800" aria-label="20 horas e 30 — palestra principal">20:30</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <span class="tl-tag">⭐ Palestra Principal</span>
+          <p class="tl-title">Deltan Dallagnol | Brasil 2026: Cenário Político, Econômico e Jurídico</p>
+        </div>
+      </div>
+
+      <div class="tl-item" role="listitem">
+        <span class="tl-time" aria-label="21 horas e 30">21:30</span>
+        <div class="tl-dot-col" aria-hidden="true"><div class="tl-dot"></div></div>
+        <div class="tl-card"><p class="tl-title">Jantar Premium de Encerramento + Networking</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOCAL -->
+<section class="local" id="local" aria-labelledby="local-title">
+  <div class="local-bg" role="img" aria-label="Cânion do Buraco do Padre — local do evento"></div>
+  <div class="local-veil" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="local-body">
+      <div class="gold-bar rv" aria-hidden="true"></div>
+      <span class="label rv">Local &amp; Data</span>
+      <h2 class="local-title rv d1" id="local-title">Buraco do Padre,<br><span class="grad">Ponta Grossa/PR.</span></h2>
+      <p class="text rv d2">
+        Um dos patrimônios naturais mais impressionantes do Paraná — o palco perfeito para uma noite de negócios, conhecimento e conexões verdadeiras.
+      </p>
+      <div class="local-cards rv d3" role="list" aria-label="Detalhes do local">
+        <div class="local-card" role="listitem">
+          <div class="local-card-l">Data</div>
+          <div class="local-card-v"><b>08 de Maio, 2026</b><br><span style="font-size:.85rem;color:var(--muted)">Sexta-feira</span></div>
+        </div>
+        <div class="local-card" role="listitem">
+          <div class="local-card-l">Horário</div>
+          <div class="local-card-v"><b>18h</b> Palestras<br><span style="font-size:.85rem;color:var(--muted)">16h30 Recepção</span></div>
+        </div>
+        <div class="local-card" style="grid-column:1/-1" role="listitem">
+          <div class="local-card-l">Endereço</div>
+          <div class="local-card-v">Buraco do Padre · Itaiacoca<br><span style="font-size:.88rem;color:var(--muted)">Ponta Grossa, Paraná — Brasil</span></div>
+        </div>
+      </div>
+      <div class="rv d4" style="margin-top:2.25rem">
+        <a href="#rsvp" class="btn btn-outline">
+          Confirmar minha presença
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp" id="rsvp" aria-labelledby="rsvp-title">
+  <div class="wrap">
+    <div class="rsvp-wrap">
+      <div class="gold-bar rv" style="margin:0 auto 1.5rem" aria-hidden="true"></div>
+      <h2 class="rsvp-title rv d1" id="rsvp-title">Garanta seu lugar.<br><span class="grad">Confirme sua presença!</span></h2>
+      <p class="rsvp-sub rv d2">
+        Apenas 140 convidados terão acesso a esta noite exclusiva. Confirme agora e faça parte da conexão que está redefinindo o agronegócio brasileiro.
+      </p>
+      <div class="rsvp-urgency rv d3" role="alert" aria-live="polite">
+        <span class="dot" aria-hidden="true"></span>
+        Evento exclusivo · <strong>140 vagas</strong> · Confirmação sujeita à aprovação
+      </div>
+      <div class="form-card rv d3">
+        <form id="rsvpForm" novalidate aria-label="Formulário de confirmação de presença">
+          <div class="fg">
+            <label for="f-nome">Nome Completo *</label>
+            <input type="text" id="f-nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" aria-required="true">
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label for="f-tel">WhatsApp *</label>
+              <input type="tel" id="f-tel" name="whatsapp" placeholder="(00) 00000-0000" required autocomplete="tel" aria-required="true">
+            </div>
+            <div class="fg">
+              <label for="f-email">E-mail *</label>
+              <input type="email" id="f-email" name="email" placeholder="seu@email.com" required autocomplete="email" aria-required="true">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="f-perfil">Perfil</label>
+            <select id="f-perfil" name="perfil">
+              <option value="" disabled selected>Selecione seu perfil</option>
+              <option value="empresario-rural">Empresário Rural</option>
+              <option value="colaborador-fazenda">Colaborador de Fazenda</option>
+              <option value="acompanhante">Acompanhante</option>
+              <option value="parceiro-comercial">Parceiro Comercial</option>
+              <option value="convidado-especial">Convidado Especial</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit" id="submitBtn">
+            Confirmar Minha Presença →
+          </button>
+          <div class="form-error" id="formError" role="alert">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="formErrorMsg">Ocorreu um erro ao enviar. Verifique sua conexão com a internet e tente novamente.</span>
+          </div>
+          <p class="form-note">🔒 Seus dados são tratados com total confidencialidade.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <img src="assets/LOGO%20TERRA%20CAPITAL_BRANCO.png" alt="Terra Capital – Fazendas e Finanças" width="120" height="34">
+  <p>
+    Terra Capital · Fazendas e Finanças<br>
+    1º Terra Capital Conecta · 08 de Maio de 2026 · Ponta Grossa, PR<br>
+    <span style="opacity:.6">© 2026 Terra Capital. Todos os direitos reservados.</span>
+  </p>
+</footer>
+
+<!-- MODAL OBRIGADO -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <div class="modal-check" aria-hidden="true">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2ECC71" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <h2 class="modal-title" id="modal-title">Presença Confirmada!</h2>
+    <p class="modal-msg">
+      Prepare-se para uma conexão inédita entre o campo e o mercado de capitais. Em breve você receberá os detalhes finais por e-mail e WhatsApp.
+    </p>
+    <div class="modal-fomo" role="note">
+      📍 Você está entre os <strong style="color:var(--gold-l)">140 convidados VIP</strong> da primeira edição. Adicione à sua agenda agora para não perder esta noite histórica.
+    </div>
+    <p style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:.75rem">Adicionar à agenda</p>
+    <div class="cal-btns">
+      <a id="gcalBtn" href="#" target="_blank" rel="noopener" class="cal-btn cal-gcal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Google Calendar
+      </a>
+      <a id="outlookBtn" href="#" target="_blank" rel="noopener" class="cal-btn cal-outlook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Outlook / Office 365
+      </a>
+      <button class="cal-btn cal-ical" id="icalBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Apple Calendar / iCal
+      </button>
+    </div>
+    <button class="modal-close" id="modalClose">Fechar</button>
+  </div>
+</div>
+
+<script>
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbyWQwK-YINQu8fkN4YKKte4F6RXKfIzW1H9otwkk30VKu4HzgdWFhlblQR5XHKq03A1/exec';
+
+/* NAV */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('sc', scrollY > 60), {passive:true});
+
+/* Hero parallax */
+const heroBg = document.getElementById('heroBg');
+window.addEventListener('scroll', () => {
+  if (scrollY < innerHeight) heroBg.style.transform = `translateY(${scrollY * 0.22}px)`;
+}, {passive:true});
+
+/* Reveal on scroll */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, {threshold: 0.13});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* Phone mask */
+const tel = document.getElementById('f-tel');
+tel.addEventListener('input', e => {
+  let v = e.target.value.replace(/\D/g,'').slice(0,11);
+  if (v.length > 6) v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+  else if (v.length > 2) v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+  e.target.value = v;
+});
+
+/* Calendar links */
+const CAL_TITLE   = '1%C2%BA%20Terra%20Capital%20Conecta';
+const CAL_START   = '2026-05-08T16:30:00';
+const CAL_END     = '2026-05-08T23:00:00';
+const CAL_LOC     = 'Buraco%20do%20Padre%20-%20Itaiacoca%2C%20Ponta%20Grossa%2FPR';
+const CAL_BODY    = 'Evento%20institucional%20Terra%20Capital%20com%20palestras%20t%C3%A9cnicas%20e%20jantar.';
+const CAL_GDATES  = '20260508T193000Z/20260509T020000Z'; /* UTC -3: 16:30→21:30 BRT */
+
+document.getElementById('gcalBtn').href =
+  `https://calendar.google.com/calendar/r/eventedit?text=${CAL_TITLE}&dates=${CAL_GDATES}&details=${CAL_BODY}&location=${CAL_LOC}`;
+
+document.getElementById('outlookBtn').href =
+  `https://outlook.live.com/calendar/0/action/compose?subject=${CAL_TITLE}&startdt=${CAL_START}&enddt=${CAL_END}&location=${CAL_LOC}&body=${CAL_BODY}`;
+
+document.getElementById('icalBtn').addEventListener('click', () => {
+  const ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0',
+    'PRODID:-//Terra Capital//Terra Capital Conecta//PT',
+    'BEGIN:VEVENT',
+    'DTSTART:20260508T193000Z',
+    'DTEND:20260509T020000Z',
+    'SUMMARY:1\u00ba Terra Capital Conecta',
+    'DESCRIPTION:Evento institucional Terra Capital com palestras t\u00e9cnicas e jantar.',
+    'LOCATION:Buraco do Padre - Itaiacoca\\, Ponta Grossa/PR',
+    'STATUS:CONFIRMED',
+    'BEGIN:VALARM','TRIGGER:-PT1H','ACTION:DISPLAY',
+    'DESCRIPTION:Terra Capital Conecta em 1 hora','END:VALARM',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  const a = Object.assign(document.createElement('a'),{
+    href: URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'})),
+    download:'terracapital-conecta-2026.ics'
+  });
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+});
+
+/* RSVP Form */
+const form      = document.getElementById('rsvpForm');
+const modal     = document.getElementById('modal');
+const submitBtn = document.getElementById('submitBtn');
+const errBox    = document.getElementById('formError');
+const errMsg    = document.getElementById('formErrorMsg');
+
+function showError(msg) {
+  errMsg.textContent = msg;
+  errBox.classList.add('on');
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Confirmar Minha Presença →';
+}
+
+function hideError() { errBox.classList.remove('on'); }
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  hideError();
+
+  /* Validação */
+  const required = form.querySelectorAll('[required]');
+  let ok = true;
+  required.forEach(f => {
+    if (!f.value.trim()) {
+      f.style.borderColor = 'rgba(220,60,60,.5)';
+      setTimeout(() => f.style.borderColor = '', 2500);
+      ok = false;
+    }
+  });
+  if (!ok) return;
+
+  /* Verificação de internet */
+  if (!navigator.onLine) {
+    showError('Parece que você está sem conexão com a internet. Verifique sua rede e tente novamente.');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Confirmando…';
+
+  /* Monta payload */
+  const nome   = document.getElementById('f-nome').value.trim();
+  const wpp    = document.getElementById('f-tel').value.trim();
+  const email  = document.getElementById('f-email').value.trim();
+  const perfil = document.getElementById('f-perfil').value;
+
+  const payload = JSON.stringify({
+    name:    nome,
+    phone:   wpp,
+    email:   email,
+    profile: perfil,
+    source:  'lp-versao2'
+  });
+
+  try {
+    await fetch(ENDPOINT, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body:    payload
+    });
+    /* no-cors: não conseguimos ler a resposta, mas o dado foi enviado */
+    modal.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  } catch (err) {
+    showError('Não foi possível enviar sua confirmação. Verifique sua conexão com a internet e tente novamente.');
+  }
+});
+
+/* Fecha modal */
+function closeModal() { modal.classList.remove('on'); document.body.style.overflow = ''; }
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
